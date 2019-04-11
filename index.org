@@ -2,6 +2,10 @@
 #+Author: Daniel Alexander Smith
 #+Email: nalisarc@gmail.com
 * ob-scad
+The library ob-scad allows for the use of openscad blocks.
+These blocks allow for you to program objects to be rendered by the OpenSCAD program
+and can be later turned into 3d printed objects.
+Results of the scad blocks can be images, and at a later point I will experiment with gifs.
 [[https://github.com/wose/ob-scad][ob-scad Repo]]
 
 * Objects
@@ -10,9 +14,6 @@
 #+BEGIN_SRC scad :file cube.png :tangle cube.scad 
 cube(5,5,5);
 #+END_SRC
-
-#+RESULTS: cube
-[[file:cube.png]]
 
 #+name: sphere
 #+BEGIN_SRC scad :file sphere.png
