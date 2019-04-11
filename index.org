@@ -8,12 +8,15 @@
 
 #+name: cube
 #+BEGIN_SRC scad :file cube.png :tangle cube.scad 
-cube(5,5,5)
+cube(5,5,5);
 #+END_SRC
+
+#+RESULTS: cube
+[[file:cube.png]]
 
 #+name: sphere
 #+BEGIN_SRC scad :file sphere.png
-sphere(5)
+sphere(5);
 #+END_SRC
 
 #+name: union
