@@ -1,0 +1,21 @@
+#+Title: Experiments with OpenSCAD
+#+Author: Daniel Alexander Smith
+#+Email: nalisarc@gmail.com
+* ob-scad
+[[https://github.com/wose/ob-scad][ob-scad Repo]]
+
+* Objects
+
+#+name: cube
+#+BEGIN_SRC scad :file cube.png :tangle cube.scad 
+cube(5,5,5)
+#+END_SRC
+
+#+name: sphere
+#+BEGIN_SRC scad :file sphere.png
+sphere(5)
+#+END_SRC
+
+#+name: union
+#+BEGIN_SRC scad :file union.png
+#+END_SRC
