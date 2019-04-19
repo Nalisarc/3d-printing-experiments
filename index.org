@@ -31,3 +31,18 @@ As I do more experiments I will post the setup and results here.
  #+name: union
  #+BEGIN_SRC scad :file union.png
  #+END_SRC
+* Ideas
+** TODO x axis limiter switch
+So I apparently knocked the little metal switch off of my x axis limiter. The button still works but it rams the extruder into the mounting bracket when homing sometimes.
+I think I'll see about printing out a new switch for the button.
+This would be a little plastic clip that attaches to the side of the button, and has a thin layer of plastic extending diagonally.
+So when the plasic is hit it stops the extruder.
+
+I'll need to take measuments to be sure of the size.
+** TODO Parafin Stretcher
+I have a pretty neat electrofluidics chip that I want to use more often.
+Unfortunately it requires making a very thin membrain and the only thing I have that works is parafin.
+I need something to strech it out to the thin membrane reliably.
+
+My plan for this is two rollers attached to gears and a crank.
+When the crank turns it rotates the rollers in opposite directions by a predicatble amount.
