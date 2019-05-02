@@ -23,6 +23,7 @@ Alternatively you can grab the appimage from [[https://www.openscad.org/download
  [[https://github.com/wose/ob-scad][ob-scad Repo]]
 ** Things to Read
 [[https://hackaday.io/page/5252-generating-nice-threads-in-openscad][Generating Nice Threads In OpenSCAD]]
+[[https://www.openscad.org/cheatsheet/index.html][Cheatsheet]]
 * Ideas
 ** TODO x axis limiter switch
 So I apparently knocked the little metal switch off of my x axis limiter. The button still works but it rams the extruder into the mounting bracket when homing sometimes.
