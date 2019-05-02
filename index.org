@@ -9,28 +9,20 @@ and a raspberry pi cam to moniter the prints and take neat timelapses.
 
 As I do more experiments I will post the setup and results here.
 * Openscad
-[[https://www.openscad.org/documentation.html][OpenSCAD Documentation]]
+** Installation
+ [[https://www.openscad.org/documentation.html][OpenSCAD Documentation]]
+While openscad has a nice app image file, I was having trouble with it finding input files that were relative to my working directory.
+I followed this [[http://ubuntuhandbook.org/index.php/2019/01/install-openscad-ubuntu-18-10-18-04/][Guide on installing openscad]] and was able to fix my file issues.
+Alternatively you can grab the appimage from [[https://www.openscad.org/downloads.html][the download page]]
+
 ** ob-scad
  The library ob-scad allows for the use of openscad blocks.
  These blocks allow for you to program objects to be rendered by the OpenSCAD program
  and can be later turned into 3d printed objects.
  Results of the scad blocks can be images, and at a later point I will experiment with gifs.
  [[https://github.com/wose/ob-scad][ob-scad Repo]]
-** Objects
-
- #+name: cube
- #+BEGIN_SRC scad :file cube.png :tangle cube.scad 
- cube(5,5,5);
- #+END_SRC
-
- #+name: sphere
- #+BEGIN_SRC scad :file sphere.png
- sphere(5);
- #+END_SRC
-
- #+name: union
- #+BEGIN_SRC scad :file union.png
- #+END_SRC
+** Things to Read
+[[https://hackaday.io/page/5252-generating-nice-threads-in-openscad][Generating Nice Threads In OpenSCAD]]
 * Ideas
 ** TODO x axis limiter switch
 So I apparently knocked the little metal switch off of my x axis limiter. The button still works but it rams the extruder into the mounting bracket when homing sometimes.
@@ -46,3 +38,23 @@ I need something to strech it out to the thin membrane reliably.
 
 My plan for this is two rollers attached to gears and a crank.
 When the crank turns it rotates the rollers in opposite directions by a predicatble amount.
+** TODO Weekly Day/Night Pill Case
+I found a really cool [[https://www.thingiverse.com/thing:2954076][Pill Case]] I've printed out two so far and they have been great.
+The only thing I would change is to essentually merge them into 
+
+#+name: pillcase-base
+#+BEGIN_SRC scad
+#+END_SRC
+
+#+name: pillcase-mid
+#+BEGIN_SRC scad
+#+END_SRC
+
+#+name: pillcase-lid
+#+BEGIN_SRC scad
+#+END_SRC
+
+#+name: pillcase-skrew
+#+BEGIN_SRC scad
+#+END_SRC
+
