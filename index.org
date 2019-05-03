@@ -58,4 +58,8 @@ The only thing I would change is to essentually merge them into
 #+name: pillcase-skrew
 #+BEGIN_SRC scad
 #+END_SRC
+* Thingiverse
+#+LINK: thing https://www.thingiverse.com/thing:%s
+[[thing:3574369][Ender 3 Troubleshoot Guide]]
 
+[[https://reprap.org/wiki/RepRap][reprap wiki]]
