@@ -68,7 +68,6 @@ Apparently a 3 point bed is easier to set than a 4 pint bed because /geometry/
 [[thing:3400187][Locking ThumbWheels and 3-Point Hot Bed Leveling]]
 [[thing:3415460][Hot Bed Leveling and 3-Point Mounting]]
 
-
 * Thingiverse
 #+LINK: thing https://www.thingiverse.com/thing:%s
 [[thing:3574369][Ender 3 Troubleshoot Guide]]
