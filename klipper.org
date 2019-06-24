@@ -2,7 +2,7 @@
 * Old Printer Config
 Old configuration was taken moslty wholesale from the ender 3 defaults.
 See [[https://github.com/KevinOConnor/klipper/blob/master/config/printer-creality-ender3-2018.cfg][this link]] for more details.
-#+BEGIN_SRC conf :noeval 
+#+BEGIN_SRC conf :noeval
 
 # This file contains common pin mappings for the 2018 Creality
 # Ender 3. To use this config, the firmware should be compiled for the
@@ -296,7 +296,7 @@ screw4_name: Back Right Screw
 * Config Orgmode Style
 ** Steppers
  #+name: stepper_x
- #+BEGIN_SRC conf :noeval 
+ #+BEGIN_SRC conf :noeval
  [stepper_x]
  step_pin: PD7
  dir_pin: !PC5
@@ -309,7 +309,7 @@ screw4_name: Back Right Screw
  #+END_SRC
 
  #+name: stepper_y
- #+BEGIN_SRC conf :noeval 
+ #+BEGIN_SRC conf :noeval
  [stepper_y]
  step_pin: PC6
  dir_pin: !PC7
@@ -322,7 +322,7 @@ screw4_name: Back Right Screw
  #+END_SRC
 
  #+name: stepper_z
- #+BEGIN_SRC conf :noeval 
+ #+BEGIN_SRC conf :noeval
  [stepper_z]
  step_pin: PB3
  dir_pin: PB2
@@ -334,7 +334,7 @@ screw4_name: Back Right Screw
  #+END_SRC
 ** Heating
  #+name: extruder
- #+BEGIN_SRC conf :noeval 
+ #+BEGIN_SRC conf :noeval
  [extruder]
  max_extrude_only_distance: 100.0
  step_pin: PB1
@@ -356,7 +356,7 @@ screw4_name: Back Right Screw
  #+END_SRC
 
  #+name: heater_bed
- #+BEGIN_SRC conf :noeval 
+ #+BEGIN_SRC conf :noeval
  [heater_bed]
  heater_pin: PD4
  sensor_type: EPCOS 100K B57560G104F
@@ -371,13 +371,13 @@ screw4_name: Back Right Screw
  #+END_SRC
 
  #+name: fan
- #+BEGIN_SRC conf :noeval 
+ #+BEGIN_SRC conf :noeval
  [fan]
  pin: PB4
  #+END_SRC
 ** Mesh Bed Leveling
 #+name: bed_mesh
-#+BEGIN_SRC conf :noeval 
+#+BEGIN_SRC conf :noeval
 # Mesh Bed Leveling. One may define a [bed_mesh] config section
 # to enable move transformations that offset the z axis based
 # on a mesh generated from probed points. Note that bed_mesh
@@ -489,13 +489,13 @@ probe_count: 3,3
 
 ** Other
  #+name: mcu
- #+BEGIN_SRC conf :noeval 
+ #+BEGIN_SRC conf :noeval
  [mcu]
  serial: /dev/ttyUSB0
  #+END_SRC
 
  #+name: printer
- #+BEGIN_SRC conf :noeval 
+ #+BEGIN_SRC conf :noeval
  [printer]
  kinematics: cartesian
  max_velocity: 300
@@ -505,7 +505,7 @@ probe_count: 3,3
  #+END_SRC
 
  #+name: display
- #+BEGIN_SRC conf :noeval 
+ #+BEGIN_SRC conf :noeval
  [display]
  lcd_type: st7920
  cs_pin: PA3
@@ -515,7 +515,28 @@ probe_count: 3,3
  click_pin: ^!PC0
  #+END_SRC
 ** Main                                                            :noexport:
- #+BEGIN_SRC conf :noeval :noweb yes :tangle printer.cfg 
+ #+BEGIN_SRC conf :noeval :noweb yes :tangle printer.cfg
+   ; Config file tangled from klipper.org
+   ; See file for additional details
+
+   ; Stepper Motors
+   <<stepper_x>>
+   <<stepper_y>>
+   <<stepper_z>>
+
+   ; Heating
+   <<extruder>>
+   <<heater_bed>>
+   <<fan>>
+
+   ; bed leveling
+   <<bed_mesh>>
+
+   <<mcu>>
+
+   <<printer>>
+
+   <<display>>
  #+END_SRC
 * Handy guides
 [[https://reprap.org/wiki/Triffid_Hunter%2527s_Calibration_Guide#Nozzle_Temperature][Reprap Calibration guide]]
