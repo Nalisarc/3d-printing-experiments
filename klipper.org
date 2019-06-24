@@ -516,27 +516,50 @@ probe_count: 3,3
  #+END_SRC
 ** Main                                                            :noexport:
  #+BEGIN_SRC conf :noeval :noweb yes :tangle printer.cfg
-   ; Config file tangled from klipper.org
-   ; See file for additional details
+      ; Config file tangled from klipper.org
+      ; See file for additional details
 
-   ; Stepper Motors
-   <<stepper_x>>
-   <<stepper_y>>
-   <<stepper_z>>
+      ; Stepper Motors
+      <<stepper_x>>
+      <<stepper_y>>
+      <<stepper_z>>
 
-   ; Heating
-   <<extruder>>
-   <<heater_bed>>
-   <<fan>>
+      ; Heating
+      <<extruder>>
+      <<heater_bed>>
+      <<fan>>
 
-   ; bed leveling
-   <<bed_mesh>>
+      ; bed leveling
+      <<bed_mesh>>
 
-   <<mcu>>
+      ; Other bits
+      <<mcu>>
 
-   <<printer>>
+      <<printer>>
 
-   <<display>>
+      <<display>>
+
+      ; Macros
+      <<prime_nozzel>>
  #+END_SRC
+** GCode Macros
+*** Prime Nozzle
+Code kindly stolen from [[http://print.theporto.com/posts/purge-and-nozzle-wipe-starting-gcode/][Print the Porto]]
+As I don't have a probe so the bits with G29 have been removed.
+This Macro should be run after heating has occurred but before the print starts.
+#+name: prime_nozzel
+#+BEGIN_SRC conf :noeval
+  [gcode_macro PRIME_NOZZEL]
+  gcode:
+      G28 X0 Y0 Z0
+      G0 X0 y0 F9000
+      G0 Z0.15
+      G92 E0
+      G1 X40 E25 F500
+      G1 E-1 F500
+      G1 X80 F4000
+      G1 Z0.3
+#+END_SRC
+
 * Handy guides
 [[https://reprap.org/wiki/Triffid_Hunter%2527s_Calibration_Guide#Nozzle_Temperature][Reprap Calibration guide]]
